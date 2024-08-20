@@ -3,6 +3,52 @@ console.log('***** Cart Functions *****');
 // We want to see how you are testing your code!!!
 
 
+// TODOS
+// Create a global variable named basket and set it to an empty array.
+let basket = [];
+let maxItems = 5;
+
+function addItem(item) {
+    basket.push(item);
+    if (isFull()){
+        return true;
+    }
+    return false;
+  }
+
+  // Function to list all items in the basket
+function listItems() {
+    for (let item of basket) {
+      console.log(item);
+    }
+  }
+
+  // Function to empty the basket
+function empty() {
+    basket.length = 0;
+  }
+
+  function removeItem(){
+    let index = basket.indexOf(item);
+    if(index !== -1){
+        return basket.splice(index,1)[0]
+    }
+    return null;
+  }
+
+
+// Create a function called addItem. It should:
+// take an input parameter for a string item
+// add the new item to the global array basket.
+// return true indicating the item was added
+// Create a function called listItems. It should:
+// loop over the items in the basket array
+// console.log each individual item on a new line
+// Create a function called empty. It should:
+// reset the basket to an empty array
+// do not use basket = [] to reset the array
+
+
 
 
 
